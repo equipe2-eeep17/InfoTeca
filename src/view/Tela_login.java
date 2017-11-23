@@ -76,7 +76,7 @@ public class Tela_login extends javax.swing.JFrame {
         jLabel1.setText("Pegasus Book");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 240, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Claudevan\\Downloads\\indicamos-6-livros-que-voce-deve-ler-noticias.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/indicamos-6-livros-que-voce-deve-ler-noticias.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 330));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

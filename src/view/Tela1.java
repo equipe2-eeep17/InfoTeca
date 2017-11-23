@@ -162,9 +162,9 @@ public class Tela1 extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(radioConsulta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(radioCadastro)
                 .addGap(30, 30, 30))
         );
@@ -180,7 +180,7 @@ public class Tela1 extends javax.swing.JFrame {
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Clique para pesquisar"));
         jPanel8.setOpaque(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Claudevan\\Downloads\\s.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/s.jpg"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -209,7 +209,7 @@ public class Tela1 extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(399, Short.MAX_VALUE)
+                .addContainerGap(406, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -258,6 +258,10 @@ public class Tela1 extends javax.swing.JFrame {
         String num = (String)jNumero.getText();
         if (radioConsulta.isSelected()){
             if (nome.equals("Amanda Da Silva Arcanjo Ferraz")&& num.equals("01")&& curso.equals("Redes")&& ano.equals("1º")|| nome.equals("primeiro")|| nome.equals("1")){
+                this.dispose();
+                TelaAluno ta = new TelaAluno(nome, curso, ano, num);
+                ta.setLocationRelativeTo(null);
+                ta.setVisible(true);
                 
             }
             
