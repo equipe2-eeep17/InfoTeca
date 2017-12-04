@@ -30,6 +30,7 @@ public class Tela_login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jsobre = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -40,17 +41,26 @@ public class Tela_login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(6, 29, 14));
+        setPreferredSize(new java.awt.Dimension(690, 350));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(5, 21, 2));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jsobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/User_Manual-80_icon-icons.com_57245 (1).png"))); // NOI18N
+        jsobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jsobreMouseClicked(evt);
+            }
+        });
+        jPanel1.add(jsobre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 50, 50));
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 220, -1));
+        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 220, -1));
 
         jLabel3.setFont(new java.awt.Font("Shonar Bangla", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 102, 0));
@@ -61,7 +71,7 @@ public class Tela_login extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(204, 102, 0));
         jLabel5.setText("Senha :");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, 20));
-        jPanel1.add(jSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 220, -1));
+        jPanel1.add(jSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 220, -1));
 
         jButton1.setText("ir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,20 +84,24 @@ public class Tela_login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Shonar Bangla", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 102, 0));
         jLabel1.setText("Pegasus Book");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 240, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 370, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/indicamos-6-livros-que-voce-deve-ler-noticias.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Eduardo\\Downloads\\indicamos-6-livros-que-voce-deve-ler-noticias.jpg")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 330));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,6 +124,13 @@ public class Tela_login extends javax.swing.JFrame {
              
          }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jsobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jsobreMouseClicked
+         Sobre sobre = new Sobre();
+         sobre.setVisible(true);
+         sobre.setLocationRelativeTo(null);
+         this.dispose();
+    }//GEN-LAST:event_jsobreMouseClicked
 
     /**
      * @param args the command line arguments
@@ -154,6 +175,7 @@ public class Tela_login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jSenha;
+    private javax.swing.JLabel jsobre;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }
